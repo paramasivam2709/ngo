@@ -1,0 +1,61 @@
+/* responsive.css — STACKLY */
+@media (max-width:1200px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{gap:40px}
+  .fc-1{left:-4%}.fc-2{right:-4%}
+}
+@media (max-width:1024px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-login{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-right{display:none}
+  .proj-grid,.blog-grid,.why-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:80px}
+  .news-box{grid-template-columns:1fr;padding:56px 44px;gap:30px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .hstat:nth-child(2){border-right:none}
+  .hstat{border-bottom:1px solid rgba(255,255,255,.1)}
+  .hstat:nth-child(3),.hstat:nth-child(4){border-bottom:none}
+}
+@media (max-width:768px){
+  .section{padding:80px 0}
+  .proj-grid,.blog-grid,.why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .news-form{flex-direction:column}
+  .news-form .btn{width:100%}
+  .hero{padding-top:130px}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:0}
+  .testi-card{padding:36px 24px}
+  .testi-text{font-size:1rem}
+  .about-media .sub-img{right:0;bottom:-30px}
+  .exp-badge{left:0;top:-20px;padding:16px 20px}
+  .exp-badge strong{font-size:1.5rem}
+  .amount-chip{padding:12px 20px;font-size:.92rem}
+  .donate-box h2{font-size:1.7rem}
+}
+@media (max-width:480px){
+  .svc-grid,.team-grid{grid-template-columns:1fr}
+  .hero-title{font-size:2.15rem}
+  .hero-cta .btn{width:100%}
+  .hero-stats{grid-template-columns:1fr 1fr;padding:6px 0}
+  .hstat{padding:18px 14px;flex-direction:column;align-items:flex-start;gap:10px}
+  .hstat strong{font-size:1.3rem}
+  .hero-stats .hs-ic{width:42px;height:42px}
+  .scroll-ind{display:none}
+  .footer-news{flex-direction:row}
+  .news-box{padding:44px 24px;border-radius:24px}
+  .proj-meta{flex-direction:column;align-items:flex-start;gap:4px}
+  .about-mini{gap:20px}
+  .donate-btn span{display:none}
+  .donate-btn{padding:12px 16px}
+  .brand-text small{display:none}
+}
+@media (max-width:360px){
+  .hero-title{font-size:1.9rem}
+  .hstat strong{font-size:1.15rem}
+  .hstat span{font-size:.75rem}
+}

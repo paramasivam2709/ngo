@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+<title>Blog & Stories — STACKLY NGO</title>
+<meta name="description" content="Stories, insights and field reports from the STACKLY community.">
+<style>
+  .blog-tools{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;margin-bottom:36px}
+  .filter-tabs{display:flex;flex-wrap:wrap;gap:10px}
+  .filter-tab{padding:11px 22px;border-radius:100px;border:1.5px solid var(--border);background:#fff;font-weight:700;font-size:.86rem;color:var(--muted);transition:.3s;cursor:pointer}
+  .filter-tab:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+  .filter-tab.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(8,127,91,.3)}
+  .blog-search{position:relative;min-width:260px;flex:1;max-width:340px}
+  .blog-search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}
+  .blog-search input{width:100%;padding:14px 20px 14px 48px;border-radius:100px;border:1.5px solid var(--border);outline:none;transition:.3s;background:#fff}
+  .blog-search input:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(8,127,91,.12)}
+  .featured{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 10px 40px rgba(11,31,51,.08);margin-bottom:44px;border:1px solid var(--border)}
+  .featured img{height:100%;min-height:320px;width:100%;object-fit:cover}
+  .featured .f-body{padding:44px;display:flex;flex-direction:column;justify-content:center}
+  .featured h2{font-size:1.7rem;margin:10px 0 14px}
+  .badge-hot{display:inline-block;background:var(--grad-o);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:100px;width:fit-content}
+  #blogEmpty{display:none;text-align:center;padding:60px 0;color:var(--muted);font-weight:600}
+  #blogPagination{display:flex;gap:10px;justify-content:center;margin-top:44px;flex-wrap:wrap}
+  #blogPagination button{padding:11px 20px;border-radius:100px;border:1.5px solid var(--border);background:#fff;font-weight:700;color:var(--muted);transition:.3s;cursor:pointer}
+  #blogPagination button.active{background:var(--grad-o);color:#fff;border-color:transparent}
+  @media(max-width:820px){.featured{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-hero">
+  <div class="ph-bg"><img src="img/blog/blog-05.webp" alt=""></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--gold)">STACKLY</span>
+    <h1 class="anim-zoom in">Blog & Stories</h1>
+    <p class="anim-up in" style="--d:.2s">Field reports, impact data and stories of hope from our community.</p>
+    <div class="crumbs"><a href="index.html">Home</a><span>/</span><span>Blog & Stories</span></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <article class="featured" data-aos="fade-up">
+      <img src="img/blog/blog-05.webp" alt="Child enjoying clean water">
+      <div class="f-body">
+        <span class="badge-hot">Featured Story</span>
+        <h2>The Day the Water Came: How One Well Changed a Village</h2>
+        <p style="color:var(--muted);margin-bottom:22px">In Kherwadi, girls once walked 6 km for water every morning — missing school. Then STACKLY drilled a well. This is the story of what happened next, in numbers and in smiles.</p>
+        <div class="blog-meta" style="margin-bottom:22px"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>By STACKLY Field Team — Aug 28, 2026</span></div>
+        <a href="#" class="btn btn-green btn-sm">Read the Full Story</a>
+      </div>
+    </article>
+    <div class="blog-tools" data-aos="fade-up">
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-tab active" data-cat="all">All</button>
+        <button class="filter-tab" data-cat="Education">Education</button>
+        <button class="filter-tab" data-cat="Healthcare">Healthcare</button>
+        <button class="filter-tab" data-cat="Environment">Environment</button>
+        <button class="filter-tab" data-cat="Community">Community</button>
+        <button class="filter-tab" data-cat="Volunteer">Volunteer</button>
+        <button class="filter-tab" data-cat="Charity">Charity</button>
+      </div>
+      <div class="blog-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg>
+        <input type="search" id="blogSearch" placeholder="Search articles…" aria-label="Search blog">
+      </div>
+    </div>
+    <div class="blog-grid" id="blogGrid">
+      <article class="blog-card" data-cat="Education" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img"><img src="img/blog/blog-01.webp" alt="Children painting in class" loading="lazy"><div class="blog-date"><strong>24</strong><span>Aug</span></div></div>
+        <div class="blog-body"><span class="blog-cat">Education</span><h3>How Education Changes Communities</h3><p>Why one classroom can transform an entire village — stories from our learning centers.</p>
+        <div class="blog-meta"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>Aarav K. — 5 min read</span></div>
+        <a class="svc-link" href="#">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="blog-card" data-cat="Healthcare" data-aos="fade-up" data-aos-delay="80">
+        <div class="blog-img"><img src="img/blog/blog-02.webp" alt="Doctor with child" loading="lazy"><div class="blog-date"><strong>12</strong><span>Aug</span></div></div>
+        <div class="blog-body"><span class="blog-cat">Healthcare</span><h3>Why Healthcare Access Matters</h3><p>Distance shouldn't decide destiny. Inside our rural health camps.</p>
+        <div class="blog-meta"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>Dr. Meera S. — 7 min read</span></div>
+        <a class="svc-link" href="#">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="blog-card" data-cat="Environment" data-aos="fade-up" data-aos-delay="160">
+        <div class="blog-img"><img src="img/blog/blog-03.webp" alt="Volunteers planting saplings" loading="lazy"><div class="blog-date"><strong>30</strong><span>Jul</span></div></div>
+        <div class="blog-body"><span class="blog-cat">Environment</span><h3>Building a Greener Future</h3><p>1.2 million trees planted and counting. Here's our roadmap to 2030.</p>
+        <div class="blog-meta"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>Green Team — 6 min read</span></div>
+        <a class="svc-link" href="#">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="blog-card" data-cat="Community" data-aos="fade-up" data-aos-delay="0">
+        <div class="blog-img"><img src="img/blog/blog-04.webp" alt="Village community with clean water" loading="lazy"><div class="blog-date"><strong>18</strong><span>Jul</span></div></div>
+        <div class="blog-body"><span class="blog-cat">Community</span><h3>Stories of Hope</h3><p>Meet the families whose lives changed with a little help and a lot of heart.</p>
+        <div class="blog-meta"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>STACKLY Desk — 8 min read</span></div>
+        <a class="svc-link" href="#">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="blog-card" data-cat="Volunteer" data-aos="fade-up" data-aos-delay="80">
+        <div class="blog-img"><img src="img/blog/blog-06.webp" alt="Volunteer with thumbs up" loading="lazy"><div class="blog-date"><strong>05</strong><span>Jul</span></div></div>
+        <div class="blog-body"><span class="blog-cat">Volunteer</span><h3>10 Ways You Can Help Your Community</h3><p>Small, practical acts of kindness anyone can start today.</p>
+        <div class="blog-meta"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>Volunteer Hub — 4 min read</span></div>
+        <a class="svc-link" href="#">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="blog-card" data-cat="Charity" data-aos="fade-up" data-aos-delay="160">
+        <div class="blog-img"><img src="img/blog/blog-05.webp" alt="Girl drinking clean water" loading="lazy"><div class="blog-date"><strong>22</strong><span>Jun</span></div></div>
+        <div class="blog-body"><span class="blog-cat">Charity</span><h3>The Power of Volunteering</h3><p>What 5,000 volunteers taught us about generosity and grit.</p>
+        <div class="blog-meta"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--green)"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg><span>Priya N. — 5 min read</span></div>
+        <a class="svc-link" href="#">Read More <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+    </div>
+    <div id="blogEmpty">No articles match your search. Try a different keyword or category.</div>
+    <div id="blogPagination" aria-label="Blog pagination"></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="news-box" data-aos="zoom-in">
+      <div><h2>Never Miss a Story</h2><p>Impact stories and project updates, once a month in your inbox.</p></div>
+      <div>
+        <form class="news-form" id="newsForm" novalidate>
+          <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <div class="form-msg" id="newsMsg" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="site-footer"></div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<title>My Dashboard — STACKLY</title>
+</head>
+<body class="dash-body dash-user" data-no-preloader data-no-glow data-light-header>
+<header class="dash-header">
+  <div class="dash-header-left">
+    <button class="dash-side-toggle" id="sideToggle" aria-label="Toggle navigation" aria-controls="dashboardSidebar" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <a href="index.html" class="dash-header-brand" aria-label="Stackly home"><img src="img/logo.webp" alt="Stackly logo"><span>STACKLY</span></a>
+  </div>
+  <div class="dash-header-actions">
+    <a href="index.html#donate" class="dash-donate-link">Make a donation</a>
+    <div class="dash-header-avatar js-user-initial" aria-label="Your profile">D</div>
+  </div>
+</header>
+<div class="dash-layout">
+  <aside class="dash-sidebar" id="dashboardSidebar">
+    <div class="dash-sidebar-title">My Impact</div>
+    <div class="dash-side-profile">
+      <div class="dash-side-avatar js-user-initial">D</div>
+      <div><strong class="js-user-name">Donor</strong><span>Impact partner</span></div>
+    </div>
+    <div class="dash-side-impact"><span>Your total giving</span><strong>₹48,500</strong><small>Thank you for making a difference.</small></div>
+    <p class="dash-side-label">Menu</p>
+    <nav class="dash-menu"><a href="dashboard.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a>
+      <a href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>My Donations</a>
+      <a href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Projects</a>
+      <a href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>Certificates</a>
+      <a href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>Profile</a>
+      <a href="#" onclick="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+      <a href="#" data-logout class="logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>Logout</a></nav>
+  </aside>
+  <main class="dash-main">
+    <div class="dash-top">
+      <div class="dash-greeting"><h1>Welcome back, <span class="js-user-name">Donor</span></h1><p>Here's the impact your generosity created this month.</p></div>
+      <div class="dash-user"><div class="avatar js-user-initial">D</div><div><strong class="js-user-name">Donor</strong><span class="js-user-email">user@stackly.org</span></div></div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="sc-ic" style="background:var(--grad)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><strong data-dashcount="48500" data-prefix="₹">0</strong><span>Total Donations</span></div></div>
+      <div class="stat-card"><div class="sc-ic" style="background:var(--grad-o)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><div><strong data-dashcount="2500" data-prefix="₹">0</strong><span>This Month</span></div></div>
+      <div class="stat-card"><div class="sc-ic" style="background:linear-gradient(135deg,#0E9F6E,#34D399)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div><strong data-dashcount="6">0</strong><span>Projects Supported</span></div></div>
+      <div class="stat-card"><div class="sc-ic" style="background:linear-gradient(135deg,#FFB703,#F59E0B)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><strong data-dashcount="120" data-suffix="+">0</strong><span>Lives Impacted</span></div></div>
+    </div>
+    <div class="dash-grid">
+      <div class="panel">
+        <div class="panel-head"><h3>Donation History (2026)</h3><a href="#">Download Report</a></div>
+        <div class="chart" id="donationChart" data-values="[1.5,2,1.8,2.5,3,2.2,4,3.5,2.8,4.5,3.2,5]" data-labels='["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]'></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Your Profile</h3></div>
+        <div style="text-align:center;margin-bottom:22px">
+          <div class="avatar js-user-initial" style="width:76px;height:76px;font-size:1.8rem;margin:0 auto 12px;border-radius:24px">D</div>
+          <strong class="js-user-name" style="display:block;color:var(--navy);font-family:var(--fh)">Donor</strong>
+          <span class="js-user-email" style="color:var(--muted);font-size:.86rem">user@stackly.org</span>
+        </div>
+        <div class="prog-row"><div class="pr-head"><strong>Impact Partner Badge</strong><span>78%</span></div><div class="bar"><i data-w="78" style=""></i></div></div>
+        <div class="prog-row"><div class="pr-head"><strong>Annual Giving Goal</strong><span>₹48.5k / ₹60k</span></div><div class="bar"><i data-w="81" style="background:var(--grad-o)"></i></div></div>
+        <a href="index.html#donate" class="btn btn-primary btn-sm" style="width:100%;margin-top:8px">Make a New Donation</a>
+      </div>
+    </div>
+    <div class="dash-grid" style="grid-template-columns:1.6fr 1fr">
+      <div class="panel">
+        <div class="panel-head"><h3>Recent Donations</h3><a href="#">View All</a></div>
+        <ul class="recent-list">
+          <li><div class="rl-ic" style="background:var(--grad)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div><strong>Education for Every Child</strong><span>Sep 28, 2026 — UPI</span></div><span class="rl-amt">+₹2,500</span></li>
+          <li><div class="rl-ic" style="background:var(--grad-o)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div><strong>Rural Healthcare Mission</strong><span>Aug 15, 2026 — Card</span></div><span class="rl-amt">+₹5,000</span></li>
+          <li><div class="rl-ic" style="background:#34D399"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div><strong>Green Earth Project</strong><span>Jul 30, 2026 — NetBanking</span></div><span class="rl-amt">+₹1,000</span></li>
+          <li><div class="rl-ic" style="background:#F59E0B"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div><div><strong>Community Food Program</strong><span>Jun 22, 2026 — UPI</span></div><span class="rl-amt">+₹500</span></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><h3>Project Progress</h3></div>
+        <div class="prog-row"><div class="pr-head"><strong>Clean Water Initiative</strong><span>64%</span></div><div class="bar"><i data-w="64" style=""></i></div></div>
+        <div class="prog-row"><div class="pr-head"><strong>Education for Every Child</strong><span>78%</span></div><div class="bar"><i data-w="78" style=""></i></div></div>
+        <div class="prog-row"><div class="pr-head"><strong>Green Earth Project</strong><span>85%</span></div><div class="bar"><i data-w="85" style=""></i></div></div>
+        <div class="prog-row"><div class="pr-head"><strong>Women Empowerment</strong><span>69%</span></div><div class="bar"><i data-w="69" style="background:var(--grad-o)"></i></div></div>
+        <div class="prog-row"><div class="pr-head"><strong>Community Food Program</strong><span>91%</span></div><div class="bar"><i data-w="91" style="background:var(--grad-o)"></i></div></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

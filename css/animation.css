@@ -1,0 +1,61 @@
+/* animation.css — STACKLY */
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-50px)}to{opacity:1;transform:none}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:none}}
+@keyframes zoomIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes gradMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}14%{transform:scale(1.18)}28%{transform:scale(1)}42%{transform:scale(1.12)}70%{transform:scale(1)}}
+@keyframes morphBlob{0%,100%{border-radius:60% 40% 55% 45%/55% 45% 60% 40%}50%{border-radius:45% 55% 40% 60%/40% 60% 45% 55%}}
+@keyframes dashFlow{to{stroke-dashoffset:-24}}
+@keyframes typeCaret{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+
+.anim-up{opacity:0}
+.anim-up.in{animation:fadeUp .9s cubic-bezier(.2,.8,.3,1) forwards}
+.anim-left{opacity:0}
+.anim-left.in{animation:fadeLeft .9s cubic-bezier(.2,.8,.3,1) forwards}
+.anim-right{opacity:0}
+.anim-right.in{animation:fadeRight .9s cubic-bezier(.2,.8,.3,1) forwards}
+.anim-zoom{opacity:0}
+.anim-zoom.in{animation:zoomIn .9s cubic-bezier(.2,.8,.3,1) forwards}
+.d-stagger.in{animation-delay:var(--d,0s)!important}
+
+/* hero text reveal */
+.reveal-line{overflow:hidden;display:block}
+.reveal-line>span{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.2,.8,.3,1)}
+.reveal-line.in>span{transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}
+
+/* image reveal clip */
+.img-reveal{clip-path:inset(0 100% 0 0);transition:clip-path 1.1s cubic-bezier(.7,0,.3,1)}
+.img-reveal.in{clip-path:inset(0 0 0 0)}
+
+/* typing caret */
+.typing-caret::after{content:"|";color:var(--gold);animation:typeCaret 1s step-end infinite;margin-left:2px}
+
+/* animated gradient text */
+.grad-anim{background:var(--grad-o);background-size:200% 200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gradMove 5s ease infinite}
+
+/* heartbeat icon */
+.beat{animation:heartbeat 1.8s ease-in-out infinite;display:inline-block}
+
+/* blob decorations */
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none;animation:morphBlob 10s ease-in-out infinite}
+.blob-g{background:#B8EBD6}
+.blob-o{background:#FFD9BE}
+.blob-y{background:#FFE9B3}
+
+/* marquee partners */
+.marquee{overflow:hidden;position:relative}
+.marquee-track{display:flex;gap:60px;width:max-content;animation:marquee 26s linear infinite}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.marquee-item{font-family:var(--fh);font-weight:800;font-size:1.35rem;color:rgba(255,255,255,.35);white-space:nowrap;display:flex;align-items:center;gap:10px}
+.marquee-item svg{width:22px;height:22px}
+
+/* page transition fade */
+body.page-fade{animation:fadeUp .5s ease}
+
+/* progress shimmer */
+.shimmer-bar{position:relative;overflow:hidden}
+.shimmer-bar::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:shimmer 2s linear infinite}

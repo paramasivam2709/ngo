@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register — STACKLY</title>
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body" data-no-preloader data-no-glow data-light-header>
+<a href="index.html" class="auth-back"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back to Home</a>
+<div class="auth-shell wide">
+  <div class="auth-head">
+    <a href="index.html" class="brand auth-brand" aria-label="STACKLY home">
+      <img src="img/logo.webp" alt="" width="58" height="58">
+      <span class="brand-text"><strong>STACKLY</strong><small>Small Acts. Big Change.</small></span>
+    </a>
+    <h1>Join the Movement</h1>
+    <p>Create your free account and start making a difference.</p>
+  </div>
+  <div class="auth-msg" id="authMsg" aria-live="polite"></div>
+  <form id="registerForm" novalidate>
+    <div class="field"><label for="rName">Full Name</label><input id="rName" type="text" data-f="name" placeholder="e.g. Priya Sharma" autocomplete="name"><span class="err">Name should contain only letters and spaces.</span></div>
+    <div class="field"><label for="rEmail">Email</label><input id="rEmail" type="email" data-f="email" placeholder="you@example.com" autocomplete="email"><span class="err">Enter a valid email address.</span></div>
+    <div class="field"><label for="rPhone">Phone</label><input id="rPhone" type="tel" data-f="phone" placeholder="+91 98765 43210" autocomplete="tel"><span class="err">Enter a valid phone number.</span></div>
+    <div class="field"><label for="rRole">Account Type</label><select id="rRole" data-f="role"><option value="user">User (Donor / Volunteer)</option><option value="admin">Admin (Organization)</option></select></div>
+    <div class="field"><label for="rPass">Password</label><input id="rPass" type="password" data-f="password" placeholder="Create a strong password" autocomplete="new-password"><span class="pass-toggle" role="button" tabindex="0" aria-label="Show password"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="err">Use 8+ chars with uppercase, number & symbol.</span><div class="pass-strength" id="passStrength"><i></i></div></div>
+    <div class="field"><label for="rConfirm">Confirm Password</label><input id="rConfirm" type="password" data-f="confirm" placeholder="Repeat your password" autocomplete="new-password"><span class="err">Passwords do not match.</span></div>
+    <label class="terms-row field" style="margin-bottom:0"><input type="checkbox" data-f="terms"><span>I agree to the <a href="#" onclick="return false">Terms & Conditions</a> and <a href="#" onclick="return false">Privacy Policy</a> of STACKLY NGO.</span></label>
+    <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px">Create Account</button>
+  </form>
+  <p class="auth-alt">Already have an account? <a href="login.html">Login</a></p>
+</div>
+<script src="js/main.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

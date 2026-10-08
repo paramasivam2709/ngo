@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+<title>Donation Plans — STACKLY NGO</title>
+<meta name="description" content="Become a monthly changemaker with STACKLY donation plans.">
+<style>
+  .plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;align-items:stretch}
+  .plan-card{background:#fff;border-radius:26px;padding:40px 30px;border:1.5px solid var(--border);position:relative;display:flex;flex-direction:column;transition:.45s cubic-bezier(.2,.8,.3,1);box-shadow:0 8px 30px rgba(11,31,51,.06)}
+  .plan-card:hover{transform:translateY(-12px);box-shadow:var(--shadow-lg);border-color:var(--green)}
+  .plan-card.popular{background:var(--navy);color:#fff;border:none;transform:scale(1.04)}
+  .plan-card.popular:hover{transform:scale(1.04) translateY(-12px)}
+  .pop-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--grad-o);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 20px;border-radius:100px;box-shadow:0 10px 24px rgba(255,107,26,.4);white-space:nowrap}
+  .plan-name{font-family:var(--fh);font-weight:800;font-size:1.15rem;color:var(--navy)}
+  .plan-card.popular .plan-name{color:#fff}
+  .plan-price{font-family:var(--fh);font-size:2.5rem;font-weight:800;color:var(--green);margin:14px 0 4px}
+  .plan-card.popular .plan-price{color:var(--gold)}
+  .plan-price small{font-size:.95rem;color:var(--muted);font-weight:600}
+  .plan-card.popular .plan-price small{color:rgba(255,255,255,.6)}
+  .plan-feats{margin:24px 0 30px;display:grid;gap:13px;flex:1}
+  .plan-feats li{display:flex;gap:11px;font-size:.9rem;color:var(--muted);align-items:flex-start}
+  .plan-card.popular .plan-feats li{color:rgba(255,255,255,.75)}
+  .plan-feats .ck{width:22px;height:22px;border-radius:50%;background:var(--light-green);color:var(--green);display:grid;place-items:center;flex-shrink:0;margin-top:1px}
+  .plan-card.popular .plan-feats .ck{background:rgba(255,183,3,.18);color:var(--gold)}
+  .plan-feats .ck svg{width:12px;height:12px}
+  @media(max-width:1024px){.plan-grid{grid-template-columns:repeat(2,1fr)}.plan-card.popular{transform:none}.plan-card.popular:hover{transform:translateY(-12px)}}
+  @media(max-width:560px){.plan-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-hero">
+  <div class="ph-bg"><img src="img/hero/hero-alt.webp" alt=""></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--gold)">STACKLY</span>
+    <h1 class="anim-zoom in">Donation Plans</h1>
+    <p class="anim-up in" style="--d:.2s">Not pricing. Partnership. Choose a monthly plan and become a steady heartbeat of change.</p>
+    <div class="crumbs"><a href="index.html">Home</a><span>/</span><span>Donation Plans</span></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="sec-head center" data-aos="fade-up">
+      <span class="eyebrow">Monthly Giving</span>
+      <h2 class="sec-title">Become a <span class="hl">Changemaker</span></h2>
+      <p class="sec-desc">Monthly donors power 70% of our work. Cancel anytime — but the change you start lasts forever.</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="plan-name">Supporter</span>
+        <div class="plan-price">₹500<small>/month</small></div>
+        <ul class="plan-feats"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Feeds a child for 2 weeks</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Quarterly impact email</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>80G tax receipt</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Donor dashboard access</li></ul>
+        <a href="index.html#donate" class="btn btn-outline" style="width:100%">Choose Supporter</a>
+      </div>
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="80">
+        <span class="plan-name">Changemaker</span>
+        <div class="plan-price">₹1,000<small>/month</small></div>
+        <ul class="plan-feats"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Educates a girl for 1 month</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Monthly impact report</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>80G tax receipt</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Birthday shoutout card</li></ul>
+        <a href="index.html#donate" class="btn btn-green" style="width:100%">Choose Changemaker</a>
+      </div>
+      <div class="plan-card popular" data-aos="zoom-in" data-aos-delay="160"><span class="pop-badge">Most Popular</span>
+        <span class="plan-name">Impact Partner</span>
+        <div class="plan-price">₹2,500<small>/month</small></div>
+        <ul class="plan-feats"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Sponsors a child's full care</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Letters from your child</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Annual impact certificate</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Invite to field visits</li></ul>
+        <a href="index.html#donate" class="btn btn-primary" style="width:100%">Choose Impact Partner</a>
+      </div>
+      <div class="plan-card" data-aos="fade-up" data-aos-delay="240">
+        <span class="plan-name">Community Champion</span>
+        <div class="plan-price">₹5,000<small>/month</small></div>
+        <ul class="plan-feats"><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Funds an entire classroom</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Named project plaque</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Quarterly video calls</li><li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>Founder's circle access</li></ul>
+        <a href="index.html#donate" class="btn btn-outline" style="width:100%">Choose Community Champion</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-cream" style="padding-top:80px">
+  <div class="container">
+    <div class="sec-head center" data-aos="fade-up">
+      <span class="eyebrow">Corporate Giving</span>
+      <h2 class="sec-title">Partner as an <span class="hl">Organization</span></h2>
+      <p class="sec-desc">CSR partnerships, payroll giving and employee volunteering — let's build your impact story together.</p>
+    </div>
+    <div class="text-center" data-aos="fade-up"><a href="contact.html" class="btn btn-green">Talk to Our Partnerships Team</a></div>
+  </div>
+</section>
+<div id="site-footer"></div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="svg/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animation.css">
+<link rel="stylesheet" href="css/responsive.css">
+<title>FAQ — STACKLY NGO</title>
+<meta name="description" content="Answers to common questions about donating, volunteering and partnering with STACKLY.">
+<style>
+  .faq-hero-tools{max-width:620px;margin:30px auto 0;position:relative}
+  .faq-hero-tools svg{position:absolute;left:22px;top:50%;transform:translateY(-50%);width:19px;height:19px;color:rgba(255,255,255,.6)}
+  .faq-hero-tools input{width:100%;padding:17px 24px 17px 52px;border-radius:100px;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;outline:none;backdrop-filter:blur(8px);font-weight:600}
+  .faq-hero-tools input::placeholder{color:rgba(255,255,255,.55)}
+  .faq-hero-tools input:focus{border-color:var(--gold)}
+  .faq-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
+  .faq-tab{padding:11px 24px;border-radius:100px;border:1.5px solid var(--border);background:#fff;font-weight:700;font-size:.86rem;color:var(--muted);transition:.3s;cursor:pointer}
+  .faq-tab:hover{border-color:var(--green);color:var(--green)}
+  .faq-tab.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 10px 24px rgba(8,127,91,.3)}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<section class="page-hero">
+  <div class="ph-bg"><img src="img/about/about-kids.webp" alt=""></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--gold)">STACKLY</span>
+    <h1 class="anim-zoom in">How Can We Help?</h1>
+    <p class="anim-up in" style="--d:.2s">Answers about donations, volunteering, projects and partnerships.</p>
+    <div class="faq-hero-tools">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg>
+      <input type="search" id="faqSearch" placeholder="Search questions…" aria-label="Search FAQ">
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="faq-tabs" role="tablist">
+      <button class="faq-tab active" data-cat="all">All</button>
+      <button class="faq-tab" data-cat="Donations">Donations</button>
+      <button class="faq-tab" data-cat="Volunteering">Volunteering</button>
+      <button class="faq-tab" data-cat="Projects">Projects</button>
+      <button class="faq-tab" data-cat="Partnerships">Partnerships</button>
+      <button class="faq-tab" data-cat="General">General</button>
+    </div>
+    <div class="faq-wrap" id="faqList">
+      <div class="faq-item" data-cat="Donations"><button class="faq-q">How can I donate?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Online via UPI, cards, net banking or wallets on our Donate page. Every gift is receipted instantly and qualifies for 80G tax deduction in India.</p></div></div>
+      <div class="faq-item" data-cat="Donations"><button class="faq-q">How is my donation used?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>82% goes directly to field programs, 12% to fundraising and 6% to administration. Quarterly breakdowns are published openly on our blog.</p></div></div>
+      <div class="faq-item" data-cat="Donations"><button class="faq-q">Can I donate monthly?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Yes! Monthly giving is our most powerful model. Pick a plan on our Donation Plans page — cancel anytime, no questions asked.</p></div></div>
+      <div class="faq-item" data-cat="Donations"><button class="faq-q">Will I get a tax receipt?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Instantly, by email. Indian donations receive 80G certificates; international donors receive a formal acknowledgment for their records.</p></div></div>
+      <div class="faq-item" data-cat="Volunteering"><button class="faq-q">Can I volunteer?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Absolutely! Join as a field volunteer, skills-based volunteer (design, coding, teaching) or remote supporter. Sign up via the Contact page.</p></div></div>
+      <div class="faq-item" data-cat="Volunteering"><button class="faq-q">How much time do I need to commit?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>As little as 4 hours a month. Weekend drives, weekday teaching slots and fully remote options are all available.</p></div></div>
+      <div class="faq-item" data-cat="Projects"><button class="faq-q">How are projects chosen?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Through field assessments, community consultations and a scoring model based on urgency, scale and sustainability. Local leaders co-sign every project.</p></div></div>
+      <div class="faq-item" data-cat="Projects"><button class="faq-q">How can I track project impact?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Live progress bars on each project page, plus monthly impact emails with photos, data and field stories. Donors above ₹2,500/month get quarterly video calls.</p></div></div>
+      <div class="faq-item" data-cat="Partnerships"><button class="faq-q">How can organizations partner with STACKLY?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Through CSR funding, employee volunteering, payroll giving or cause-marketing campaigns. Write to partners@stackly.org and our team will respond within 2 working days.</p></div></div>
+      <div class="faq-item" data-cat="General"><button class="faq-q">Is STACKLY a registered NGO?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Yes — registered as a non-profit trust in India with 80G and 12A certifications, independently audited every year since 2015.</p></div></div>
+      <div class="faq-item" data-cat="General"><button class="faq-q">Can I sponsor a child?<span class="fq-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button><div class="faq-a"><p>Yes — ₹1,000/month covers a child's education, healthcare and nutrition. You'll receive letters, photos and annual progress reports.</p></div></div>
+    </div>
+    <div class="text-center mt-40" data-aos="fade-up">
+      <p style="color:var(--muted);margin-bottom:18px">Still have questions?</p>
+      <a href="contact.html" class="btn btn-green">Contact Our Team</a>
+    </div>
+  </div>
+</section>
+<div id="site-footer"></div>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animation.js"></script>
+</body>
+</html>
