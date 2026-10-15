@@ -178,8 +178,8 @@ body.no-scroll{overflow:hidden}
 .about-media .main-img{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
 .about-media .main-img img{transition:transform .8s ease}
 .about-media:hover .main-img img{transform:scale(1.05)}
-.about-media .sub-img{position:absolute;right:-34px;bottom:-44px;width:52%;border-radius:22px;overflow:hidden;border:8px solid #fff;box-shadow:0 24px 60px rgba(11,31,51,.25);animation:floatY 7s ease-in-out infinite}
-.exp-badge{position:absolute;top:-26px;left:-26px;background:var(--grad-o);color:#fff;border-radius:22px;padding:22px 26px;text-align:center;box-shadow:0 18px 44px rgba(255,107,26,.4);animation:floatY 5.5s ease-in-out infinite}
+.about-media .sub-img{position:relative;width:52%;margin:24px 0 0 auto;border-radius:22px;overflow:hidden;border:8px solid #fff;box-shadow:0 24px 60px rgba(11,31,51,.25);animation:floatY 7s ease-in-out infinite}
+.exp-badge{position:absolute;top:-26px;left:-26px;z-index:2;background:var(--grad-o);color:#fff;border-radius:22px;padding:22px 26px;text-align:center;box-shadow:0 18px 44px rgba(255,107,26,.4);animation:floatY 5.5s ease-in-out infinite}
 .exp-badge strong{display:block;font-family:var(--fh);font-size:2rem;line-height:1}
 .exp-badge span{font-size:.78rem;letter-spacing:.06em}
 .about-copy .check-list{margin:26px 0 34px;display:grid;gap:14px}
@@ -250,6 +250,7 @@ body.no-scroll{overflow:hidden}
 
 /* ---------- WHY CHOOSE ---------- */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.mission-grid{grid-template-columns:repeat(2,1fr)}
 .why-card{background:#fff;border-radius:var(--radius-lg);padding:36px 30px;box-shadow:0 8px 30px rgba(11,31,51,.06);transition:.4s;border:1px solid var(--border);position:relative;overflow:hidden}
 .why-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:var(--grad-o);transform:scaleX(0);transform-origin:left;transition:transform .5s}
 .why-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}
@@ -368,6 +369,7 @@ body.no-scroll{overflow:hidden}
 .footer-news input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:13px 20px;color:#fff;outline:none;min-width:0}
 .footer-news input::placeholder{color:rgba(255,255,255,.5)}
 .footer-news button{background:var(--grad-o);border-radius:50%;width:48px;height:48px;display:grid;place-items:center;color:#fff;flex-shrink:0;transition:.3s}
+.footer-news button svg{width:16px;height:16px}
 .footer-news button:hover{transform:scale(1.1) rotate(-8deg)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.86rem;position:relative}
 .footer-bottom a{color:rgba(255,255,255,.6);transition:.3s}

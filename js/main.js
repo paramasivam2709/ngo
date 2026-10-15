@@ -97,9 +97,9 @@
             </a>
             <p>STACKLY is a global NGO working to unlock education, healthcare, clean environments and thriving communities — one small act at a time.</p>
             <div class="social-row">
-              <a href="#" aria-label="Facebook">${I.fb}</a><a href="#" aria-label="Instagram">${I.ig}</a>
-              <a href="#" aria-label="LinkedIn">${I.li}</a><a href="#" aria-label="YouTube">${I.yt}</a>
-              <a href="#" aria-label="X">${I.x}</a>
+              <a href="404.html"  rel="noopener noreferrer" aria-label="Facebook">${I.fb}</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">${I.ig}</a>
+              <a href="404.html" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">${I.li}</a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">${I.yt}</a>
+              <a href="404.html" target="_blank" rel="noopener noreferrer" aria-label="X">${I.x}</a>
             </div>
           </div>
           <div>
